@@ -1,0 +1,45 @@
+# ── Esteemwire .gitignore ──────────────────────────────────────────────
+# This repo must never publish secrets, private notes, or working files.
+# Everything below stays on this machine only.
+
+# Dependencies and build output
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment files: every variant, including .env itself.
+# Secrets (RESEND_API_KEY) live in Vercel's settings, never in the repo.
+.env
+.env.*
+*.env
+!.env.example
+
+# Private notes, briefs and audit reports
+LESSONS.md
+REFERENCE-*.md
+BRIEF.md
+*-BRIEF.md
+SECURITY-AUDIT.md
+DESIGN.md
+
+# Raw video takes and other generated working files (~38 MB).
+# The finished, site-ready videos are in public/work and ARE committed.
+generated/
+
+# Tool and editor state
+.claude/
+.vercel/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
